@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Conta {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String agencia;
 	private String banco;

@@ -5,14 +5,21 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
 	<persistence-unit name="financas">
+	<!-- Implementação do JPA , nesse caso estou utilizando Hibernate  -->
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	<!-- Listagem das classes que vou utilizar como Entidades para criação das tables  -->
 		<class>br.com.financas.modelo.Conta</class>
+		<class>br.com.financas.modelo.Movimentacao</class>
+		<class>br.com.financas.modelo.Cliente</class>
+		<class>br.com.financas.modelo.Categoria</class>
+		
 		<properties>
+		<!--  Propriedades JDBC (Banco , url , userlogin , userpassword)-->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/contas" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="1234" />
-
+		<!-- Configurações especificas do Hibernate  (Dialeto utilizado , criação da table se não existir , mostrar sql Queries e formata-las)-->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />

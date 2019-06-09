@@ -20,7 +20,7 @@ public class TesteMovimentacoesComCategoria {
 		Categoria c1 =  new Categoria("Viagem");
 		Categoria c2 =  new Categoria("Alimentos");
 		Categoria c3 =  new Categoria("Roupas");
-		Conta conta = new Conta().setId(3);
+		Conta conta = new Conta().setId(1);
 		
 		
 		Movimentacao movimentacao =  new Movimentacao()
